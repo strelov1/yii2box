@@ -1,0 +1,16 @@
+- name: Clone git repository
+  git: >
+    dest=/var/www/{{ hostname }} 
+    repo={{ repo }} 
+    update=no
+  sudo: yes
+  sudo_user: www-data
+
+- name: install project
+  shell: chdir="/var/www/{{ hostname }}/" composer install --prefer-dist -o
+
+- name: update advanced project temaplate
+  shell: chdir="/var/www/{{ hostname }}/" composer update --prefer-dist -o
+
+- name: init project
+  shell: php /var/www/{{ hostname }}/init --env=Development

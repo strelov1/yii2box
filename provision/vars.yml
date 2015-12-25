@@ -1,0 +1,20 @@
+hostname: yii2box
+locale: ru_RU.UTF-8
+
+github_oauth_token: b957fdca748c73ca160dc279fc94438ad617713c
+
+repo: https://github.com/yiisoft/yii2-app-advanced.git
+
+mysql:
+    install: '1'
+    root_password: ''
+    database: yii2advanced
+    user: root
+    password: ''
+    dump: ''
+
+vhosts:
+  [
+    { name: 'yii2box', rootFolder: '/var/www/yii2box/frontend/web'},
+    { name: 'backend.yii2box', rootFolder: '/var/www/yii2box/backend/web'}
+  ]
