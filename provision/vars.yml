@@ -1,7 +1,7 @@
 hostname: yii2box
 locale: ru_RU.UTF-8
 
-github_oauth_token: b957fdca748c73ca160dc279fc94438ad617713c
+github_oauth_token: ''
 
 repo: https://github.com/yiisoft/yii2-app-advanced.git
 
